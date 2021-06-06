@@ -1,0 +1,57 @@
+.row {
+    padding: 0;
+    max-width: 112.5rem;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.site-top-bar {
+    background: #333;
+    max-width: 1680px;
+}
+.site-top-message {
+    padding: 0.75em 0;
+    line-height: 1.8em;
+    float: left;
+    margin-right: 35px;
+    font-size: 13px;
+}
+.site-top-icons {
+    float: right;
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+    padding: 0 0 0 50px;
+    line-height: 1.8em;
+    overflow: auto;
+    font-size: 16px !important;
+    cursor: pointer;
+}
+.site-header {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.large-12 {
+    width: 100%;
+}
+
+.site-branding {
+    margin-right: 35px;
+    display: inline-block;
+    height: auto;
+}
+
+.navbar-nav {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+.icon-bar {
+    color: white;
+    margin-right: 20px;
+}

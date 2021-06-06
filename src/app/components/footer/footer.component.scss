@@ -1,0 +1,60 @@
+a {
+    color: #333;
+    text-decoration: none;
+}
+p {
+    color: #000000;
+    font-family: "Kanit";
+    font-style: normal;
+    font-weight: 500;
+    text-transform: none;
+}
+.row {
+    padding: 0;
+    max-width: 112.5rem;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-bottom: 1px solid #ddd;
+}
+.large-6 {
+    width: 50%;
+}
+.large-12 {
+    width: 100%;
+}
+.column,
+.columns {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+.widget-title {
+    margin: 0px 0 15px;
+}
+.widget {
+    margin-bottom: 80px;
+    margin-top: 60px;
+}
+.site-footer {
+    display: block;
+    background-color: rgb(240, 240, 240);
+}
+.navbar-nav-footer {
+    margin-bottom: 34px;
+    display: flex;
+    font-size: 24px;
+}
+.navbar-collapse-footer {
+    justify-content: center;
+}
+.copyright {
+    margin-bottom: 46px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+    color: #868686;
+}
+.site-footer-copyright {
+    background-color: rgb(240, 240, 240);
+    margin-top: 60px;
+}

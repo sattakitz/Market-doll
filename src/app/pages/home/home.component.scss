@@ -1,0 +1,142 @@
+.row {
+    padding: 0;
+    max-width: 112.5rem;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.shop_header {
+    margin-bottom: 60px;
+}
+.shop_header_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: none;
+}
+.page-title {
+    font-size: 1.875em;
+    margin: -0.13em 0 15px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50.512px;
+    margin-bottom: 28px;
+    line-height: 1;
+}
+.column,
+.columns {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+.large-12 {
+    width: 100%;
+}
+.large-centered,
+.large-centered:last-child:not(:first-child) {
+    float: none;
+    clear: both;
+}
+.large-centered {
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-content .list-centered,
+.list-centered {
+    margin-left: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    list-style: none;
+}
+.list_shop_categories {
+    margin: 0px 0 3px;
+}
+.list-centered li a {
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    margin: 0 12px 5px;
+    padding: 5px 0px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background: none;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: color 0.3s, border-color 0.2s;
+    -o-transition: color 0.3s, border-color 0.2s;
+    transition: color 0.3s, border-color 0.2s;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.catalog_top {
+    padding: 0px 0px 20px;
+}
+.xlarge-2 {
+    width: 16.66667%;
+}
+// .large-3 {
+//     width: 25%;
+// }
+.wpb_widgetised_column {
+    margin-bottom: 150px;
+    padding-right: 30px;
+}
+h3.widget-title {
+    font-family: "Kanit" !important;
+    font-size: 28px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+}
+.widget ul,
+.widget ol {
+    margin: 0 0 0 0;
+    font-size: 15px;
+    line-height: 20px;
+    list-style: none;
+}
+.wpb_widgetised_column aside ul li span.count {
+    float: right;
+    font-size: 0.6875rem;
+    line-height: 1;
+    padding: 6px 10px 4px 10px !important;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    text-align: center;
+    min-width: 10px;
+    margin-top: -1px;
+    border-width: 1px;
+    border-style: solid;
+}
+.wpb_widgetised_column aside ul li span.count {
+    border-color: transparent;
+}
+.wpb_widgetised_column aside ul li span.count {
+    background: rgba(84, 84, 84, 0.05);
+}
+.woocommerce .widget_product_categories ul li a:before,
+.woocommerce-page .widget_product_categories ul li a:before,
+.widget_product_categories ul li a:before {
+    content: " ";
+    width: 14px;
+    height: 14px;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 8px;
+    display: block;
+    float: left;
+    margin-top: 2px;
+    border-radius: 14px;
+    border-color: rgba(84, 84, 84, 0.15) !important;
+}
+.count {
+    float: right;
+    color: black;
+}
