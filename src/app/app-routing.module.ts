@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PublicComponent, SecureComponent } from './layouts';
+import { HtOrderComponent } from './pages/home/ht-order/ht-order.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     path: 'product-management',
     component: SecureComponent,
     loadChildren: () => import('./pages').then(C => C.ProductManagementModule),
-  },
+  },  
   {
     path: '**',
     redirectTo: 'home',
