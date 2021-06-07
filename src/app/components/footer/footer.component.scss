@@ -20,7 +20,7 @@ p {
 }
 
 .large-6 {
-    width: 50%;
+    width: 200%;
 }
 
 .large-12 {
@@ -45,6 +45,11 @@ p {
 .site-footer {
     display: block;
     background-color: rgb(240, 240, 240);
+}
+
+.site-footer-detail {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-nav-footer {
