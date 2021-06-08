@@ -37,6 +37,15 @@ p {
     margin: 0px 0 15px;
 }
 
+.widget-title-right {
+    margin: 0px 0 15px;
+    text-align: end;
+}
+
+.textwidget-right {
+    text-align: end;
+}
+
 .widget {
     margin-bottom: 80px;
     margin-top: 60px;
@@ -49,7 +58,7 @@ p {
 
 .site-footer-detail {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .navbar-nav-footer {
