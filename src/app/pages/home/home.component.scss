@@ -91,6 +91,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: rgb(219, 102, 102);
+    text-decoration: none;
+}
+
 .catalog_top {
     padding: 0px 0px 20px;
 }
@@ -199,11 +204,11 @@ h3.widget-title {
 }
 
 .xlarge-8 {
-    width: 66.66666%;
+    width: 60.66666%;
 }
 
 .xlarge-4 {
-    width: 33.33333%;
+    width: 39.33333%;
 }
 
 .text-left {
