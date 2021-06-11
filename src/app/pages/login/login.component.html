@@ -1,7 +1,7 @@
 <div class="limiter">
     <div class="container-login">
         <div class="wrap-login">
-            <form class="login-form validate-form">
+            <form [formGroup]="formlogin" (submit)="onSubmit()" class="login-form validate-form">
                 <span class="login-form-title p-b-26">
                     Welcome to Products Management
                 </span>
@@ -9,21 +9,23 @@
                     <i class="fas fa-piggy-bank"></i>
                 </span>
 
-                <div class="wrap-input validate-input" data-validate="Valid email is: a@b.c">
-                    <input class="input100" type="text" name="email" required placeholder="Email">
+                <div class="wrap-input validate-input" data-validate="Valid username is: a@b.c">
+                    <input class="input100" formControlName="username" type="text" name="username" required
+                        placeholder="Email">
                 </div>
 
                 <div class="wrap-input validate-input" data-validate="Enter password">
                     <span class="btn-show-pass">
                         <i class="zmdi zmdi-eye"></i>
                     </span>
-                    <input class="input100" type="password" name="pass" required placeholder="Password">
+                    <input class="input100" type="password" name="Password" formControlName="password" required
+                        placeholder="Password">
                 </div>
 
                 <div class="container-login-form-btn">
                     <div class="wrap-login-form-btn">
                         <div class="login-form-bgbtn"></div>
-                        <button class="login-form-btn">
+                        <button type="submit" class="login-form-btn">
                             Login
                         </button>
                     </div>
