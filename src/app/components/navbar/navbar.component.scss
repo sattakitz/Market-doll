@@ -63,7 +63,7 @@
     margin-right: 20px;
 }
 
-header.sticky {
+.sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -73,6 +73,38 @@ header.sticky {
     // padding-bottom: 15px !important;
 }
 
+// respon mobile
+@media only screen and (max-width: 40.063em) {
+    #masthead {
+        padding-top: 8px;
+        padding-bottom: 9px;
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .site-header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .row {
+        padding: 0 50px;
+    }
+}
+
+#site-top-bar {
+    height: 43px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #site-top-bar {
+        display: block;
+    }
+}
+
+// mobile
 a {
     text-decoration: none;
     color: white;

@@ -1,7 +1,8 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Users } from '../users';
+import { pipe } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,23 +10,32 @@ import { Users } from '../users';
 
 export class AppService {
   redirectUrl!: string;
-
-  baseUrl: string = "http://localhost/market_doll/users";
+  baseUrl: string = "https://5fca6cf13c1c220016442675.mockapi.io/api/v1/";
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
+
+
   constructor(private httpClient: HttpClient) { }
 
-  public userlogin(username: any, password: any) {
-    alert(username)
-    return this.httpClient.post<any>(this.baseUrl + '/post-user.php', { username, password })
-      .pipe(map(Users => {
-        this.setToken(Users[0].name);
-        this.getLoggedInName.emit(true);
-        return Users;
-        
-        
-      }));
+  httpOptions = {
+    header: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
   }
+
+  LoginUser(model: any) {
+    return this.httpClient.post<any>(`${this.baseUrl}users`, model);
+  }
+
+  // public userlogin(username: any, password: any) {
+  //   alert(username)
+  //   return this.httpClient.post<any>(this.baseUrl + '/post-user.php', { username, password })
+  //     .pipe(map(Users => {
+  //       this.setToken(Users[0].name);
+  //       this.getLoggedInName.emit(true);
+  //       return Users;
+  //     }));
+  // }
 
   // public userregistration(name: any, email: any, pwd: any) {
   //   return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })

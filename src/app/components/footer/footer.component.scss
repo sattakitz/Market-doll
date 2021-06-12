@@ -9,6 +9,15 @@ p {
     font-style: normal;
     font-weight: 500;
     text-transform: none;
+    font-size: 18px;
+}
+
+h3.widget-title {
+    font-family: 'Kanit'!important;
+    font-size: 28px!important;
+    font-style: normal!important;
+    font-weight: 700!important;
+    text-transform: none!important;
 }
 
 .row {
@@ -64,7 +73,9 @@ p {
 .navbar-nav-footer {
     margin-bottom: 34px;
     display: flex;
-    font-size: 24px;
+    // display: inline-block;
+    font-size: 30px;
+    margin: 0 15px 34px
 }
 
 .navbar-collapse-footer {
@@ -74,7 +85,7 @@ p {
 .copyright {
     font-weight: normal;
     margin-bottom: 46px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     padding: 0;
     text-align: center;
@@ -84,4 +95,8 @@ p {
 .site-footer-copyright {
     background-color: rgb(240, 240, 240);
     margin-top: 60px;
+}
+
+.nav-link {
+    padding: 0.5rem 2rem;
 }

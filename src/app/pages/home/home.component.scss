@@ -128,6 +128,12 @@ h3.widget-title {
     list-style: none;
 }
 
+@media screen and (max-width: 63.9375em) {
+    .show-for-large {
+        display: none !important;
+    }
+}
+
 .wpb_widgetised_column aside ul li span.count {
     float: right;
     font-size: 0.6875rem;
