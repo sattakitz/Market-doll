@@ -79,4 +79,11 @@ a {
     cursor: pointer;
 }
 
-// top button
+// search modal
+.modal.show .modal-dialog {
+    max-width: 100%;
+    transform: none;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
