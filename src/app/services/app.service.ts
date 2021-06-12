@@ -34,6 +34,30 @@ export class AppService {
   //     }));
   // }
 
+<<<<<<< HEAD
+=======
+  redirectUrl!: string;
+  baseUrl: string = "http://localhost/market_doll/users/";
+  @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
+  constructor(private httpClient: HttpClient) { }
+
+  public userlogin(username: any, password: any) {
+    return this.httpClient.post<any>(this.baseUrl + 'post-user.php', { username, password })
+      .pipe(map(Users => {
+        this.setToken(Users[0].name);
+        this.getLoggedInName.emit(true);
+        return Users;
+      }));
+  }
+
+  // public userregistration(name, email, pwd) {
+  //   return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })
+  //     .pipe(map(Users => {
+  //       return Users;
+  //     }));
+  // }
+
+>>>>>>> f99c5462703e626749f07292701a6c63557b3d3b
   //token
   setToken(token: string) {
     localStorage.setItem('token', token);
@@ -51,4 +75,8 @@ export class AppService {
     }
     return false;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f99c5462703e626749f07292701a6c63557b3d3b

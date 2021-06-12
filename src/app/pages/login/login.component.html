@@ -1,7 +1,7 @@
 <div class="limiter">
     <div class="container-login">
         <div class="wrap-login">
-            <form [formGroup]="formlogin" (submit)="onSummit()" class="login-form validate-form">
+            <form [formGroup]="formlogin" (submit)="onSubmit()" class="login-form validate-form">
                 <span class="login-form-title p-b-26">
                     Welcome to Products Management
                 </span>
@@ -10,14 +10,14 @@
                 </span>
 
                 <div class="wrap-input validate-input" data-validate="Valid username is: a@b.c">
-                    <input formControlName="username" class="input100 form-control" type="text" name="username" required placeholder="Username">
+                    <input class="input100" formControlName="username" type="text" name="username" required placeholder="Email">
                 </div>
 
                 <div class="wrap-input validate-input" data-validate="Enter password">
                     <span class="btn-show-pass">
                         <i class="zmdi zmdi-eye"></i>
                     </span>
-                    <input formControlName="password" class="input100 form-control" type="password" name="password" required placeholder="Password">
+                    <input class="input100" type="password" name="Password" formControlName="password" required placeholder="Password">
                 </div>
 
                 <div class="container-login-form-btn">
