@@ -3,6 +3,7 @@
     max-width: 112.5rem;
     margin-right: 30px;
     margin-left: 30px;
+    --bs-gutter-x: 0rem;
 }
 
 .site-top-bar {
@@ -16,6 +17,7 @@
     float: left;
     margin-right: 35px;
     font-size: 13px;
+    font-weight: 400;
 }
 
 .site-top-icons {
@@ -90,7 +92,7 @@
 
 @media only screen and (min-width: 40.063em) {
     .row {
-        padding: 0 50px;
+        padding: 0 0;
     }
 }
 
@@ -118,4 +120,58 @@ a {
     top: 0;
     padding: 0;
     margin: 0;
+}
+
+.modal-title {
+    font-weight: bolder;
+    font-size: 10px;
+    color: gray;
+}
+
+.modal-header {
+    padding: 6rem 1rem 1rem;
+    border: none;
+}
+
+.modal-body {
+    padding: 1rem 1rem;
+}
+
+.modal-footer {
+    padding: 3rem 0rem 5rem 0rem;
+    justify-content: flex-start;
+}
+
+input {
+    border: none;
+    padding: 0;
+    font-size: 41px;
+}
+
+.input-group-lg>.btn,
+.input-group-lg>.form-control,
+.input-group-lg>.form-select,
+.input-group-lg>.input-group-text {
+    padding: 0 1rem 0 1rem;
+    font-size: 41px;
+}
+
+.input-group {
+    height: 60px;
+}
+
+span {
+    border: none;
+    background: none;
+}
+
+.search-icon {
+    font-size: 46px;
+    color: darkgray;
+    cursor: pointer;
+}
+
+.modal-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem 1.5rem -0.5rem auto;
 }

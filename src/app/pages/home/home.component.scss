@@ -10,6 +10,19 @@
     margin: 0;
 }
 
+.row.expanded {
+    max-width: none;
+}
+
+.row.expanded .row {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row:not(.expanded) .row {
+    max-width: none;
+}
+
 .shop_header {
     margin-bottom: 60px;
 }

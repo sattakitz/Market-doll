@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   formlogin!: FormGroup;
   loading = false;
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
     private dataService: AppService,
     private router: Router) {
     this.formlogin = this.fb.group({
@@ -28,19 +29,18 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit() {
-    console.log(this.formlogin.value);
-
     if (this.formlogin.invalid) {
       alert("Please fill out Username or Password")
       return;
     }
+    console.log(this.formlogin.value);
+
     this.loading = true;
-    this.dataService.LoginUser(this.formlogin.value).subscribe(data => {
+    this.dataService.userlogin(this.formlogin.value).subscribe(data => {
       if (data != null) {
         const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/product-management';
         alert("Login Success!")
         this.router.navigate([redirect]);
-        alert("Welcome to Products Management")
 
       } else {
         alert("Login fail");
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       }
 
     }, error => {
-      alert("ERROR FORM SERVER ")
+      alert("Can't Login Now!")
     });
   }
 
