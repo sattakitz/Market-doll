@@ -42,7 +42,6 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
         path: 'บทความ',
         component: ArticleComponent,
       },
-
     ]),
   ]
 })

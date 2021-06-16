@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PublicComponent, SecureComponent } from './layouts';
-import { HtOrderComponent } from './pages/home/ht-order/ht-order.component';
+import { SidebarComponent } from './components';
+import { PublicComponent } from './layouts';
 
 const routes: Routes = [
   {
@@ -15,12 +15,12 @@ const routes: Routes = [
   },
   {
     path: 'product-management',
-    component: SecureComponent,
+    component: SidebarComponent,
     loadChildren: () => import('./pages').then(C => C.ProductManagementModule),
-  },  
+  },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   }
 ];

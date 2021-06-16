@@ -18,10 +18,15 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private dataService: AppService,
-    private router: Router) {
+    private router: Router,
+    private http: HttpClient) {
     this.formlogin = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(1)]],
       password: ['', Validators.required]
+    });
+
+    this.http.get(`http://localhost/market_doll/users/get-users.php`).subscribe(res => {
+      console.log(res);
     });
   }
   ngOnInit(): void {
@@ -48,15 +53,12 @@ export class LoginComponent implements OnInit {
       }
 
     }, error => {
-      alert("Can't Login Now!")
+      alert("Can't login now!")
     });
   }
 
-  get username() { return this.formlogin.get('username'); }
-  get password() { return this.formlogin.get('password'); }
-
-
-
+  // get username() { return this.formlogin.get('username'); }
+  // get password() { return this.formlogin.get('password'); }
 
 }
 

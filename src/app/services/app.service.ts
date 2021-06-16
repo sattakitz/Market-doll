@@ -17,11 +17,11 @@ export class AppService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // httpOptions = {
-  //   header: new HttpHeaders({
-  //     'Content-Type': 'application/json'
-  //   })
-  // }
+  httpOptions = {
+    header: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
 
   // LoginUser(model: any) {
   //   return this.httpClient.post<any>(`${this.baseUrl}users`, model);
@@ -35,13 +35,13 @@ export class AppService {
   public userlogin({ username, password }: any) {
     // alert(username)
     return this.httpClient.post<any>(this.baseUrl + `post-user.php`, { username, password })
-      // .pipe(map(Users => {
-      //   // this.setToken(Users[0].name);
-      //   // this.getLoggedInName.emit(true);
-      //   return Users;
-      // }
-      // )
-      // )
+      .pipe(map(Users => {
+        // this.setToken(Users[0].name);
+        // this.getLoggedInName.emit(true);
+        return Users;
+      }
+      )
+      )
       ;
   }
 
