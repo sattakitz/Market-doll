@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secure.component.scss']
 })
 export class SecureComponent implements OnInit {
-
+  sCollapsed = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  setSidebarCollapse() {
+    this.sCollapsed = !this.sCollapsed;
   }
 
 }

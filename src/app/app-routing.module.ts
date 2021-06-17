@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from './components';
-import { PublicComponent } from './layouts';
+import { PublicComponent, SecureComponent } from './layouts';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'product-management',
-    component: SidebarComponent,
+    component: SecureComponent,
     loadChildren: () => import('./pages').then(C => C.ProductManagementModule),
   },
   {

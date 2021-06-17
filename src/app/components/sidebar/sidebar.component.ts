@@ -8,6 +8,10 @@ import { AppService } from 'src/app/services/app.service';
 })
 export class SidebarComponent implements OnInit {
 
+  products = 0;
+  articles = 0;
+  users = 0;
+
   constructor() { }
 
   ngOnInit(): void {

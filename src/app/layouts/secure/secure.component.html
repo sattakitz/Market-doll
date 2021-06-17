@@ -1,1 +1,56 @@
-<app-sidebar></app-sidebar>
+<header>
+    <div class="navbar-wrapper" [class.collapsed]="sCollapsed">
+        <div class="navbar navbar-expand">
+            <a href="javascript:;" class="link-light" (click)="setSidebarCollapse()"> <i class="fas fa-chevron-left"
+                    [class.collapsed]="sCollapsed"></i> </a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a href="javascript:;" class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-user"></i> บัญชี</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:;">Action</a></li>
+                        <li><a class="dropdown-item" href="javascript:;">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:;">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="sidebar-wrapper" [class.collapsed]="sCollapsed">
+    <div class="sidebar-content">
+        <div class="sidebar-header">
+            <a href="javascript:;" class="sidebar-brand link-light"> Brandner </a>
+        </div>
+        <div class="sidebar-menu">
+            <div for="" class="menu-label">Menu</div>
+            <ul class="menu-group">
+                <li> <a class="menu-item link-light" href="javascript:;">
+                        <i class="fab fa-accusoft me-2"></i> <span class="menu-item-label">Dashboard</span> </a>
+                </li>
+                <li> <a class="menu-item link-light" href="javascript:;">
+                        <i class="fab fa-accusoft me-2"></i> <span class="menu-item-label">Products</span> </a>
+                </li>
+                <li> <a class="menu-item link-light" href="javascript:;">
+                        <i class="fab fa-accusoft me-2"></i> <span class="menu-item-label">Profile</span> </a>
+                </li>
+            </ul>
+            <div class="mt-auto text-end">
+                <a href="javascript:;" class="icon-toggle link-light" (click)="setSidebarCollapse()">
+                    <i class="fas fa-chevron-left" [class.collapsed]="sCollapsed"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrapper" [class.collapsed]="sCollapsed">
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+$sidebar-width: 230px;
+$sidebar-width-collapsed: 60px;
+$transition-collapse: all 0.2s ease;
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: $sidebar-width;
+    right: 0;
+    z-index: 11;
+    height: 60px;
+    transition: $transition-collapse;
+
+    .navbar {
+        background-color: #202020;
+        height: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        .navbar-brand {
+            color: #f1f1f1;
+        }
+    }
+
+    &.collapsed {
+        left: $sidebar-width-collapsed;
+    }
+}
+
+.sidebar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: $sidebar-width;
+    height: 100vh;
+    transition: $transition-collapse;
+
+    .sidebar-header {
+        height: 60px;
+        background-color: #202020;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .sidebar-menu {
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #252525;
+        color: #f1f1f1;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.collapsed {
+        width: $sidebar-width-collapsed;
+
+        .menu-item {
+            text-align: center;
+
+            .menu-item-label {
+                display: none;
+            }
+        }
+    }
+}
+
+.page-wrapper {
+    height: 100vh;
+    padding-left: $sidebar-width;
+    padding-top: 60px;
+    transition: $transition-collapse;
+
+    .page-content {
+        padding: 1rem 1.5rem;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &.collapsed {
+        padding-left: $sidebar-width-collapsed;
+    }
+}
+
+.fa-chevron-left {
+    transition: $transition-collapse;
+    transform: rotateY(0);
+
+    &.collapsed {
+        transform: rotateY(180deg);
+    }
+}
+
+.menu-group {
+    list-style: none;
+    padding: 0;
+
+    .menu-item {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #383838;
+        }
+    }
+}
+
+.icon-toggle {
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        background-color: #383838;
+    }
+}

@@ -1,3 +1,84 @@
-<p>
-  add-articles works!
-</p>
+<div class=" container">
+    <div class="row">
+        <div class="col">
+            <h2 class="mb-4 mt-4">บทความ</h2>
+        </div>
+        <div class="col" style="text-align: end;">
+            <div class="mb-4 mt-4 btn-add">
+                <button class="btn btn-border" data-bs-toggle="modal" data-bs-target="#ModalAddArticle">
+                    <i class="far fa-plus-square"></i> เพิ่มบทความใหม่
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <!-- <a href="#" class="d-flex card-items">
+                <div class="card card-article" style="height: 100%; width: 40%;">
+                    <img src="assets/imageplaceholder.jpg" class="card-img-top" style="height: 100%; width: 100%;"
+                        alt="imageplaceholder">
+                </div>
+                <div class="card-body" style="width: 60%;">
+                    <h5 class="card-title"> Testing title1 keyword </h5>
+                    <p class="card-text">content. this is a test simple content</p>
+                </div>
+            </a> -->
+            <div class="card card-article">
+                <img class="card-img-top" src="assets/imageplaceholder.jpg" alt="no image">
+                <div class="card-body">
+                    <h5 class="card-title">Testing title1 keyword</h5>
+                    <p class="card-text">content. this is a test simple content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal add article -->
+
+<div class="modal fade" id="ModalAddArticle" tabindex="-1" aria-labelledby="ModalAddArticle" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-lg modal-sm-12 ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Article title">เพิ่มบทความ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- form add article -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <div class="px">
+                            <form [formGroup]="form" class="form-article validate-form" (submit)="onSubmit()">
+                                <div class="form-group">
+                                    <label>หัวข้อบทความ<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="idArticle"
+                                        formControlName="ArticleTitle" placeholder="หัวข้อบทความ">
+                                </div>
+                                <div class="form-group">
+                                    <label>รายละเอียด</label>
+                                    <ckeditor [editor]="Editor" [data]="editorData" (ready)="onReady($event)"
+                                        (change)="editorChange($event)">
+                                    </ckeditor>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn button">สร้างบทความ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <h1 style="border: 1px solid #000;">XXX</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

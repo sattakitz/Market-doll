@@ -5,12 +5,15 @@ import { RouterModule } from '@angular/router';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { AddArticlesComponent } from './add-articles/add-articles.component';
 import { AdminComponent } from './admin/admin.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
-    ProductManagementComponent
+    ProductManagementComponent,
+    AddProductsComponent,
+    AddArticlesComponent,
+    AdminComponent,
   ],
   imports: [
     CommonModule,
@@ -20,18 +23,21 @@ import { AdminComponent } from './admin/admin.component';
         component: ProductManagementComponent,
       },
       {
-        path: 'addproduct',
+        path: 'จัดการสินค้า',
         component: AddProductsComponent,
       },
       {
-        path: 'addarticle',
+        path: 'จัดการบทความ',
         component: AddArticlesComponent,
       },
       {
-        path: 'manageadmin',
+        path: 'จัดการผู้ดูแลระบบ',
         component: AdminComponent,
       },
     ]),
+    FormsModule,
+    ReactiveFormsModule,
+    CKEditorModule,
   ]
 })
 export class ProductManagementModule { }

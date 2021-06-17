@@ -13,6 +13,10 @@ body {
     color: black;
 }
 
+body {
+    position: relative;
+}
+
 // .row {
 //     max-width: 75rem;
 //     /* margin-right: 10px; */
@@ -23,28 +27,23 @@ body {
     margin-left: -0.725rem;
 }
 
-
 /*จอเล็ก*/
 
-@media print,
-screen and (min-width: 40em) {
+@media print, screen and (min-width: 40em) {
     .row .row {
         margin-right: -0.725rem;
         margin-left: -0.725rem;
     }
 }
-
 
 /*จอกลางเล็ก*/
 
-@media print,
-screen and (min-width: 64em) {
+@media print, screen and (min-width: 64em) {
     .row .row {
         margin-right: -0.725rem;
         margin-left: -0.725rem;
     }
 }
-
 
 /*จอกลาง*/
 
@@ -59,7 +58,6 @@ screen and (min-width: 64em) {
     }
 }
 
-
 /*จอใหญ่*/
 
 @media screen and (min-width: 90em) {
@@ -73,10 +71,14 @@ screen and (min-width: 64em) {
     }
 }
 
-
 /*จอใหญ่สุด*/
 
 .row {
     padding: 0;
     max-width: 112.5rem;
+}
+
+.material-icons {
+    vertical-align: text-bottom !important;
+    font-size: 22px;
 }
