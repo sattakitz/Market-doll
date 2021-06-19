@@ -1,3 +1,115 @@
-<p>
-  admin works!
-</p>
+<!-- Header -->
+<div class=" container">
+  <div class="row">
+    <div class="col">
+      <h2 class="mb-4 mt-4">ผู้ดูแลระบบ</h2>
+    </div>
+    <div class="col" style="text-align: end;">
+      <div class="mb-4 mt-4 btn-add">
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#ModalAddAdmin">
+          <i class="fas fa-plus"></i> เพิ่มผู้ดูแลระบบ
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Table -->
+<div class="container">
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th class="col-4">ID</th>
+        <th class="col-2">บัญชีผู้ใช้</th>
+        <th class="col-2">ชื่อ - นามสกุล</th>
+        <th class="col-2">วันที่สร้าง</th>
+        <th class="btn-management" class="col-2">-</th>
+      </tr>
+    </thead>
+    <tbody class="table-admin">
+      <tr>
+        <td>60878df36d33b9243c7bcbed</td>
+        <td>admin</td>
+        <td>programmer Test</td>
+        <td>27/04/2021 11:07 </td>
+        <td class="btn-management">
+          <p class="ptext">DELETE</p>
+        </td>
+      </tr>
+      <tr>
+        <td>60878df36d33b9243c7bcbed</td>
+        <td>admin</td>
+        <td>programmer Test</td>
+        <td>27/04/2021 11:07 </td>
+        <td class="btn-management">
+          <p class="ptext">DELETE</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- pagination -->
+
+  <div class="d-flex justify-content-center mt-5">
+    <div class="border">
+      Pagination
+    </div>
+  </div>
+</div>
+
+<!-- modal Add admin -->
+<div class="modal fade" id="ModalAddAdmin" tabindex="-1" aria-labelledby="addAdmin" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabelAdmin">เพิ่มผู้ดูแลระบบ</h5>
+      </div>
+      <div class="modal-body">
+        <div class="col-12 my-3 px-3">
+          <form [formGroup]="formAddAdmin" class="validate-form" (submit)="onSubmit()">
+            <div class="form-group">
+              <label class="lb-fontw">บัญชีผู้ใช้<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" formControlName="username" placeholder="กรอกบัญชีผู้ใช้">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">ชื่อ</label>
+              <input type="text" class="form-control" formControlName="fname" placeholder="กรอกชื่อ">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">นามสกุล</label>
+              <input type="text" class="form-control" formControlName="lname" placeholder="กรอกนามสกุล">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">รหัสผ่าน<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" formControlName="password" placeholder="กรอกรหัสผ่าน">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">ยืนยันรหัสผ่าน<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" formControlName="password1" placeholder="กรอกยืนยันรหัสผ่าน">
+            </div>
+
+            <div class="mt-4 mb-2 admini">
+              Administrator
+            </div>
+            <hr>
+            <div class="form-group mt-2">
+              <label class="lb-fontw">rootAdministrator<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" formControlName="rootAdminUser" placeholder="">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">rootPassword<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" formControlName="rootPassword" placeholder="">
+            </div>
+
+            <div class="form-group d-flex">
+              <button type="submit" class="btn btn-dark" required>สร้างผู้ดูแลระบบ</button>
+              <label for="" class="ms-2 mt-2">
+                <span></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

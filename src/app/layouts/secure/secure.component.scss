@@ -36,6 +36,16 @@ $transition-collapse: all 0.2s ease;
     height: 100vh;
     transition: $transition-collapse;
 
+    .icon-padding {
+        padding: 0 10px 0 0;
+    }
+    .fab,
+    .far,
+    .fa,
+    .fas {
+        font-size: 1.5rem;
+    }
+
     .sidebar-header {
         height: 60px;
         background-color: #202020;

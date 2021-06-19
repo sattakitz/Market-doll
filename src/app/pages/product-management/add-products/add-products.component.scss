@@ -1,0 +1,42 @@
+.card-product {
+    border-radius: 8px;
+    .card-img-top {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        min-width: 1px;
+    }
+
+    .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+p.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .icon-color {
+        color: gray;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: grid;
+    .imageDisplay {
+        height: 300px;
+        width: 100%;
+    }
+    img {
+        object-fit: cover;
+    }
+    .lb-fontw {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}

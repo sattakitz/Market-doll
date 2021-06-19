@@ -5,8 +5,8 @@
         </div>
         <div class="col" style="text-align: end;">
             <div class="mb-4 mt-4 btn-add">
-                <button class="btn btn-border" data-bs-toggle="modal" data-bs-target="#ModalAddArticle">
-                    <i class="far fa-plus-square"></i> เพิ่มบทความใหม่
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#ModalAddArticle">
+                    <i class="fas fa-plus"></i> เพิ่มบทความใหม่
                 </button>
             </div>
         </div>
@@ -32,6 +32,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Testing title1 keyword</h5>
                     <p class="card-text">content. this is a test simple content</p>
+                    <p class="card-text"> {{viewall}} &nbsp; <i class="far fa-eye icon-color"></i></p>
                 </div>
             </div>
         </div>
@@ -52,7 +53,7 @@
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-8">
                         <div class="px">
-                            <form [formGroup]="form" class="form-article validate-form" (submit)="onSubmit()">
+                            <form [formGroup]="form" class="validate-form" (submit)="onSubmit()">
                                 <div class="form-group">
                                     <label>หัวข้อบทความ<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="idArticle"
@@ -64,20 +65,110 @@
                                         (change)="editorChange($event)">
                                     </ckeditor>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn button">สร้างบทความ</button>
+                                <div class="form-group d-flex">
+                                    <button type="submit" class="btn btn-dark">สร้างบทความ</button>
+                                    <label for="" class="ms-2 mt-2">
+                                        <input type="checkbox" name="view-example" id="example">
+                                        <span>&nbsp; ตัวอย่าง</span>
+                                    </label>
                                 </div>
                             </form>
                         </div>
+
+                        <!-- form add SEO -->
+
+                        <div class="px my-5 w-50">
+                            <div class="border">
+                                <div class="p-3">
+                                    <h5>ตั้งค่า SEO</h5>
+                                    <hr>
+                                    <form [formGroup]="formSEO" class="validate-form" (submit)="onSubmit()">
+                                        <div class="from-group">
+                                            <label for="">Title</label>
+                                            <input class="form-control" id="" type="text" name="TitleSEO"
+                                                formControlName="TitleSEO" aria-describedby="helpId"
+                                                placeholder="Title">
+                                        </div>
+                                        <div class="from-group">
+                                            <label for="">Description</label>
+                                            <input class="form-control" id="" type="text" name="DescriptionSEO"
+                                                formControlName="DescriptionSEO" aria-describedby="helpId"
+                                                placeholder="Description">
+                                        </div>
+                                        <div class="from-group">
+                                            <label for="">Url
+                                                <span class="text-danger">*</span>
+                                                <span>e.g. www.yourdomain/Url</span>
+                                            </label>
+                                            <input class="form-control" id="" type="text" name="url"
+                                                formControlName="url" aria-describedby="helpId" placeholder="Url">
+                                        </div>
+                                        <div class="from-group">
+                                            <label for="">Keywords</label>
+                                            <input class="form-control" type="text" name="Keywords"
+                                                formControlName="Keywords" aria-describedby="helpId"
+                                                placeholder="Keywords1, Keywords2, Keywords3">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-12 col-md-12 col-lg-4">
-                        <h1 style="border: 1px solid #000;">XXX</h1>
+                        <div class="px">
+                            <div class="border">
+                                <div class="px-3 py-2">
+                                    <div class="form-group mt-2">
+                                        <label for="">รูปหน้าปก
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <br>
+                                        <img class="imageDisplay" src="{{imageUp}}" alt="no image">
+                                    </div>
+                                    <div class="form-group d-flex justify-content-center mt-3">
+                                        <input type="file" name="filefront" id="filefront"
+                                            (change)="onFileChanged($event)" class="d-none">
+                                        <label for="filefront">
+                                            <div>
+                                                <a class="btn btn-dark" style="color: white;">
+                                                    <i class="far fa-edit"></i>
+                                                    &nbsp; อัพโหลด
+                                                </a>
+                                            </div>
+                                        </label>
+                                        <div class="ms-3">
+                                            <button type="submit" class="btn btn-outline-dark"
+                                                (click)="onFileRemoved(imageEmpty)"><i class="fas fa-times"></i> &nbsp;
+                                                นำออก
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8 my-5 d-block">
+                        <div class="border">
+                            <div class="px-3 pt-3">
+                                <h4><i class="far fa-eye"></i> &nbsp;
+                                    ตัวอย่างบทความ</h4>
+                                <hr>
+                            </div>
+                            <div class="px-3">
+                                <h4>
+                                    {{form.value.ArticleTitle}}
+                                </h4>
+                                <p class="date"> 18/06/2021 14:17 by <a href=""> test </a></p>
+                            </div>
+                            <div class="px-3 pt-0 PreviewArticle">
+                                {{form.value.editor}}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

@@ -9,9 +9,20 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./add-articles.component.scss']
 })
 export class AddArticlesComponent implements OnInit {
+
   public Editor = ClassicEditor;
+
+  public editorData = '<p></p>';
+
   form: FormGroup = this.createFormGroup;
-  public editorData = '<p[config]></p>';
+  formSEO: FormGroup = this.createFormGroupSeo;
+
+  viewall = 0;
+
+  imageUp: any;
+  imageEmpty: any;
+  message!: string;
+  imagePath: any;
 
   constructor(
     private ngFb: FormBuilder,
@@ -19,6 +30,15 @@ export class AddArticlesComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  get createFormGroupSeo() {
+    return this.ngFb.group({
+      TitleSEO: [''],
+      DescriptionSEO: [''],
+      url: [''],
+      Keywords: [''],
+    })
   }
 
   get createFormGroup() {
@@ -43,6 +63,30 @@ export class AddArticlesComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form.value);
+    console.log(this.formSEO.value);
+  }
+
+  onFileChanged(event) {
+    const files = event.target.files;
+    if (files.length === 0)
+      return;
+
+    const mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+
+    const reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+      this.imageUp = reader.result;
+    }
 
   }
+  onFileRemoved(imageEmpty) {
+    imageEmpty = 0;
+  }
+
 }

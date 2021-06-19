@@ -1,3 +1,84 @@
-<p>
-  add-products works!
-</p>
+<div class=" container">
+  <div class="row">
+    <div class="col">
+      <h2 class="mb-4 mt-4">สินค้า</h2>
+    </div>
+    <div class="col" style="text-align: end;">
+      <div class="mb-4 mt-4 btn-add">
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#ModalAddProduct">
+          <i class="fas fa-plus"></i> เพิ่มสินค้าใหม่
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-2">
+      <div class="card card-product">
+        <img class="card-img-top" src="assets/imageplaceholder.jpg" alt="no image">
+        <div class="card-body">
+          <h5 class="card-title">Testing title1 keyword</h5>
+          <p class="card-text">content. this is a test simple content</p>
+          <p class="card-text"> 13 &nbsp; <i class="far fa-eye icon-color"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal Add admin -->
+<div class="modal fade" id="ModalAddProduct" tabindex="-1" aria-labelledby="addProduct" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabelAdmin">เพิ่มผู้ดูแลระบบ</h5>
+      </div>
+      <div class="modal-body">
+        <div class="col-12 my-3 px-3">
+          <form [formGroup]="formAddProduct" class="validate-form" (submit)="onSubmit()">
+            <div class="form-group mt-2">
+              <label class="lb-fontw" for="">รูปหน้าปก
+                <span class="text-danger">*</span>
+              </label>
+              <br>
+              <img class="imageDisplay" src="{{imageUp}}" alt="no image">
+            </div>
+            <div class="form-group d-flex justify-content-center mt-3">
+              <input type="file" name="filefront" id="filefront" (change)="onFileChanged($event)" class="d-none">
+              <label for="filefront">
+                <div>
+                  <a class="btn btn-dark" style="color: white;">
+                    <i class="far fa-edit"></i>
+                    &nbsp; อัพโหลด
+                  </a>
+                </div>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">ชื่อสินค้า</label>
+              <input type="text" class="form-control" formControlName="pname" placeholder="กรอกชื่อสินค้า">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">รายละเอียด</label>
+              <input type="text" class="form-control" formControlName="detail" placeholder="กรอกรายละเอียด">
+            </div>
+            <div class="form-group">
+              <label class="lb-fontw">ราคา</label>
+              <input type="number" class="form-control" formControlName="price" placeholder="ราคา">
+            </div>
+
+            <div class="form-group d-flex">
+              <button type="submit" class="btn btn-dark">สร้างสินค้า</button>
+              <label for="" class="ms-2 mt-2">
+              </label>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,9 +9,7 @@ import { AppService } from 'src/app/services/app.service';
 export class PublicComponent implements OnInit {
 
   constructor() {
-    // window.onscroll = (event: Event) => {
-    //   console.log(document.documentElement.scrollTop);
-    // }
+
   }
 
   ngOnInit(): void {

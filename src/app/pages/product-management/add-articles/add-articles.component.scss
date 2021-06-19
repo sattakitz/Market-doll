@@ -26,9 +26,10 @@ div.warper-text {
 
 .card-article {
     flex-direction: row;
+    border-radius: 8px;
     .card-img-top {
         display: block;
-        width: 50px;
+        width: 60px;
         height: auto;
     }
 
@@ -47,11 +48,9 @@ p.card-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.btn-border {
-    border: 1px solid #000;
-    border-radius: 8px;
+    .icon-color {
+        color: gray;
+    }
 }
 
 // modal add article
@@ -72,9 +71,19 @@ p.card-text {
 .form-group {
     margin-bottom: 15px;
     display: grid;
+    .imageDisplay {
+        height: 250px;
+        width: 100%;
+    }
 }
 label {
     font-size: 16px;
     font-weight: bolder;
     margin-bottom: 0.5rem;
+}
+.border {
+    border: 1px solid #000;
+    .pb-5 {
+        padding-bottom: 3rem !important;
+    }
 }
