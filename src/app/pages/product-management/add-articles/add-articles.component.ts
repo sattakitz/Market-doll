@@ -20,7 +20,7 @@ export class AddArticlesComponent implements OnInit {
   viewall = 0;
 
   imageUp: any;
-  imageEmpty: any;
+  imageEmpty: any = 0;
   message!: string;
   imagePath: any;
 
@@ -85,8 +85,8 @@ export class AddArticlesComponent implements OnInit {
     }
 
   }
-  onFileRemoved(imageEmpty) {
-    imageEmpty = 0;
+  onFileRemoved(event = null) {
+    this.imageEmpty = event;
   }
 
 }

@@ -11,9 +11,7 @@ a {
     border-radius: 8px;
     border: solid 1px lightgrey;
 }
-img {
-    object-fit: cover;
-}
+
 .p-2 {
     padding: 0.5rem !important;
 }
@@ -31,6 +29,9 @@ div.warper-text {
         display: block;
         width: 60px;
         height: auto;
+    }
+    img {
+        object-fit: cover;
     }
 
     .card-body {
@@ -53,8 +54,6 @@ p.card-text {
     }
 }
 
-// modal add article
-
 .px {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -71,6 +70,9 @@ p.card-text {
 .form-group {
     margin-bottom: 15px;
     display: grid;
+    img {
+        object-fit: contain;
+    }
     .imageDisplay {
         height: 250px;
         width: 100%;
