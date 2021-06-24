@@ -1,102 +1,102 @@
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 p {
-    color: #000000;
-    font-family: "Kanit";
-    font-style: normal;
-    font-weight: 500;
-    text-transform: none;
-    font-size: 18px;
+  color: #000000;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 500;
+  text-transform: none;
+  font-size: 18px;
 }
 
 h3.widget-title {
-    font-family: 'Kanit'!important;
-    font-size: 28px!important;
-    font-style: normal!important;
-    font-weight: 700!important;
-    text-transform: none!important;
+  font-family: "Kanit" !important;
+  font-size: 28px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
 }
 
 .row {
-    padding: 0;
-    max-width: 112.5rem;
-    margin-right: 30px;
-    margin-left: 30px;
-    border-bottom: 1px solid #ddd;
+  padding: 0;
+  max-width: 112.5rem;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-bottom: 1px solid #ddd;
 }
 
 .large-6 {
-    width: 200%;
+  width: 200%;
 }
 
 .large-12 {
-    width: 100%;
+  width: 100%;
 }
 
 .column,
 .columns {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
 
 .widget-title {
-    margin: 0px 0 15px;
+  margin: 0px 0 15px;
 }
 
 .widget-title-right {
-    margin: 0px 0 15px;
-    text-align: end;
+  margin: 0px 0 15px;
+  text-align: end;
 }
 
 .textwidget-right {
-    text-align: end;
+  text-align: end;
 }
 
 .widget {
-    margin-bottom: 80px;
-    margin-top: 60px;
+  margin-bottom: 80px;
+  margin-top: 60px;
 }
 
 .site-footer {
-    display: block;
-    background-color: rgb(240, 240, 240);
+  display: block;
+  background-color: rgb(240, 240, 240);
 }
 
 .site-footer-detail {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-nav-footer {
-    margin-bottom: 34px;
-    display: flex;
-    // display: inline-block;
-    font-size: 30px;
-    margin: 0 15px 34px
+  margin-bottom: 34px;
+  display: flex;
+  // display: inline-block;
+  font-size: 30px;
+  margin: 0 15px 34px;
 }
 
 .navbar-collapse-footer {
-    justify-content: center;
+  justify-content: center;
 }
 
 .copyright {
-    font-weight: normal;
-    margin-bottom: 46px;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0;
-    text-align: center;
-    color: #868686;
+  font-weight: normal;
+  margin-bottom: 46px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0;
+  text-align: center;
+  color: #868686;
 }
 
 .site-footer-copyright {
-    background-color: rgb(240, 240, 240);
-    margin-top: 60px;
+  background-color: rgb(240, 240, 240);
+  margin-top: 60px;
 }
 
 .nav-link {
-    padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
 }

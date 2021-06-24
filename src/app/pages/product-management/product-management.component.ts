@@ -29,6 +29,7 @@ export class ProductManagementComponent implements OnInit {
   getUsers() {
     this.svApi.getUsers().subscribe(res => {
       console.log("🚀 ~ this.svApi.getUsers ~ res", res);
+
     });
   }
 

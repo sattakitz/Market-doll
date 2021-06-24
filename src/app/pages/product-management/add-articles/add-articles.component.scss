@@ -1,0 +1,91 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-items {
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+    height: 150px;
+    border-radius: 8px;
+    border: solid 1px lightgrey;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+div.warper-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-article {
+    flex-direction: row;
+    border-radius: 8px;
+    .card-img-top {
+        display: block;
+        width: 60px;
+        height: auto;
+    }
+    img {
+        object-fit: cover;
+    }
+
+    .card-body {
+        min-width: 1px;
+    }
+
+    .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+p.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .icon-color {
+        color: gray;
+    }
+}
+
+.px {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.form-control {
+    height: 45px;
+    background-color: whitesmoke;
+    font-size: 17px;
+    border: solid 0px whitesmoke;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: grid;
+    img {
+        object-fit: contain;
+    }
+    .imageDisplay {
+        height: 250px;
+        width: 100%;
+    }
+}
+label {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.border {
+    border: 1px solid #000;
+    .pb-5 {
+        padding-bottom: 3rem !important;
+    }
+}

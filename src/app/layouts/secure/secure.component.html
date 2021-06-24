@@ -1,1 +1,62 @@
-<app-sidebar></app-sidebar>
+<header>
+    <div class="navbar-wrapper" [class.collapsed]="sCollapsed">
+        <div class="navbar navbar-expand">
+            <a href="javascript:;" class="link-light" (click)="setSidebarCollapse()"> <i class="fas fa-chevron-left"
+                    [class.collapsed]="sCollapsed"></i> </a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a href="javascript:;" class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-user"></i> บัญชี</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:;">ออกจากระบบ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="sidebar-wrapper" [class.collapsed]="sCollapsed">
+    <div class="sidebar-content">
+        <div class="sidebar-header">
+            <a href="javascript:;" class="sidebar-brand link-light"> Brandner </a>
+        </div>
+        <div class="sidebar-menu">
+            <div for="" class="menu-label"> </div>
+            <ul class="menu-group">
+                <li> <a class="menu-item link-light" href="product-management">
+                        <i class="fas fa-chart-line icon-padding"></i>
+                        <span class="menu-item-label">แดชบอร์ด</span> </a>
+                </li>
+                <li> <a class="menu-item link-light" href="product-management/จัดการสินค้า">
+                        <i class="fab fa-reddit-alien icon-padding"></i>
+                        <span class="menu-item-label">จัดการสินค้า</span> </a>
+                </li>
+                <li> <a class="menu-item link-light" href="product-management/จัดการบทความ">
+                        <span class="material-icons icon-padding">
+                            feed
+                        </span>
+                        <span class="menu-item-label">จัดการบทความ</span> </a>
+                </li>
+                <li> <a class="menu-item link-light" href="product-management/จัดการผู้ดูแลระบบ">
+                        <span class="material-icons icon-padding">
+                            admin_panel_settings
+                        </span>
+                        <span class="menu-item-label">ผู้ดูแลระบบ</span> </a>
+                </li>
+            </ul>
+            <div class="mt-auto text-end">
+                <a href="javascript:;" class="icon-toggle link-light" (click)="setSidebarCollapse()">
+                    <i class="fas fa-chevron-left" [class.collapsed]="sCollapsed"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrapper" [class.collapsed]="sCollapsed">
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
